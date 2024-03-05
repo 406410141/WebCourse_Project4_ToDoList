@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+//漸層 設定
+i{
+    //避免監聽計算錯誤
+    pointer-events: none;
+}
+
+body {
+    background: linear-gradient(90deg, rgb(84,135,255),rgb(100,255,140));
+
+}
+
+//和標題分開 有一段距離
+//再將標題置中以及切換顏色
+
+header {
+    height:  20vh;
+    display:  flex;
+    justify-content:  center;
+    align-items: center;
+    h1 {
+        color: rgb(211, 201, 188);
+        font-size: 3rem;
+    }
+}
+
+//form 移到中間
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items:  center;
+
+    //設定輸入匡以及按鈕 不要外匡以及調整大小
+    input,button {
+        border: none;
+        font-size: 1.75 rem;
+        padding: 0.25rem 0.5 rem;
+        margin: 0.1rem;
+
+    }
+    //修改input 是number 的框框寬度  
+    input[type="number"]{
+        width:  70px;
+        text-align: center;
+    }
+    //input number arrows remove -> hidden arrow
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+
+    /* Firefox */
+    input[type=number] {
+    -moz-appearance: textfield;
+    }
+    //修改按鈕顏色
+    button {
+        cursor: pointer;
+        background-color: rgb(72, 91, 90);
+        color: white;
+    }
+
+}
+
+section{ 
+        //將加入的東西放在中間
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  div.todo {
+    width:  20vw;
+    display:flex;
+    align-items: center;
+    margin: 0.2rem 0rem;
+    transition: all 0.1s ease;
+
+    p{
+      background-color: white;
+      color: black;
+      padding: 0.25rem 0.5rem;
+      font-size: 1.75rem;
+                
+            
+    p.todo-text{
+      width: 70%;
+
+        }
+    p.todo-time{
+      width: 20%;
+      text-align: center;
+
+     }
+    
+        }
+        button {  
+            padding: 0.25rem 0.5rem;
+            font-size: 1.75rem;     
+            border: none;
+            cursor: pointer;
+            color : white;
+                        
+            }
+          button.complete {
+            background-color: rgb(164, 239, 164);
+    
+                    }
+          button.delete {
+            background-color: red;
+                    }   
+                }   
+
+}
+.done{
+    opacity: 0.5;
+    text-decoration: line-through;
+    text-decoration-thickness: 0.2rem;
+}
+
+@keyframes scaleUP {
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+
+    }
+    
+}

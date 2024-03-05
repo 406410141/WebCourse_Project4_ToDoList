@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+i {
+  pointer-events: none;
+}
+
+body {
+  background: linear-gradient(90deg, rgb(84, 135, 255), rgb(100, 255, 140));
+}
+
+header {
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header h1 {
+  color: rgb(211, 201, 188);
+  font-size: 3rem;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Chrome, Safari, Edge, Opera */
+  /* Firefox */
+}
+form input, form button {
+  border: none;
+  font-size: 1.75 rem;
+  padding: 0.25rem 0.5 rem;
+  margin: 0.1rem;
+}
+form input[type=number] {
+  width: 70px;
+  text-align: center;
+}
+form input::-webkit-outer-spin-button,
+form input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+form input[type=number] {
+  -moz-appearance: textfield;
+}
+form button {
+  cursor: pointer;
+  background-color: rgb(72, 91, 90);
+  color: white;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section div.todo {
+  width: 20vw;
+  display: flex;
+  align-items: center;
+  margin: 0.2rem 0rem;
+  transition: all 0.1s ease;
+}
+section div.todo p {
+  background-color: white;
+  color: black;
+  padding: 0.25rem 0.5rem;
+  font-size: 1.75rem;
+}
+section div.todo p p.todo-text {
+  width: 70%;
+}
+section div.todo p p.todo-time {
+  width: 20%;
+  text-align: center;
+}
+section div.todo button {
+  padding: 0.25rem 0.5rem;
+  font-size: 1.75rem;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+section div.todo button.complete {
+  background-color: rgb(164, 239, 164);
+}
+section div.todo button.delete {
+  background-color: red;
+}
+
+.done {
+  opacity: 0.5;
+  text-decoration: line-through;
+  text-decoration-thickness: 0.2rem;
+}
+
+@keyframes scaleUP {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}/*# sourceMappingURL=styles.css.map */
