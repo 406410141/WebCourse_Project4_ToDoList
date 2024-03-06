@@ -106,4 +106,9 @@ section div.todo button.delete {
   to {
     transform: scale(1);
   }
+}
+@keyframes scaleDown {
+  to {
+    transform: scale(0);
+  }
 }/*# sourceMappingURL=styles.css.map */

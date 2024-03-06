@@ -47,6 +47,18 @@ add.addEventListener("click", e=>{
     deleteButton.classList.add("delete");
     deleteButton.innerHTML='<i class="fa-solid fa-trash"></i>';
 
+    deleteButton.addEventListener("click", e=>{
+        //console.log(e.target);
+        let todoItem = e.target.parentElement;
+        todoItem.addEventListener("animationend",  ()=>{
+            todoItem.remove();
+        })
+        todoItem.style.animation = "scaleDown 0.3s forwards";
+        //console.log(todoItem);
+       // todoItem.remove();
+
+    })
+
     todo.appendChild(completeButton);
     todo.appendChild(deleteButton);
     todo.style.animation = "scaleUp 1s forwards"
