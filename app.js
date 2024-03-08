@@ -15,7 +15,12 @@ add.addEventListener("click", e=>{
     let todoDay = form.children[2].value;
     console.log(todoText,todoDay,todoMonth);
     
-
+    if (todoText === ""){
+        alert("Please Enter Event Name");
+        return
+        //return 後後面的程式碼不會被執行
+    }
+ 
     //create todo list 
     let todo  = document.createElement("div");
     todo.classList.add("todo");
@@ -63,7 +68,27 @@ add.addEventListener("click", e=>{
     todo.appendChild(deleteButton);
     todo.style.animation = "scaleUp 1s forwards"
 
+    //create object 
+    let myTodo = {
+        todoText : todoText,
+        todoMonth: todoMonth,
+        todoDay : todoDay
 
+    }
+
+    let myList = localStorage.getItem("list");
+    //console.log(myList);
+    if(myList ==null){
+        localStorage.setItem("list",JSON.stringify([myTodo]));
+    }else{
+        let myListArray = JSON.parse(myList);
+        myListArray.push(myTodo);
+        localStorage.setItem("list",JSON.stringify([myListArray]));
+
+    }
+    console.log(JSON.parse(localStorage.getItem("list")));
+
+    form.children[0].value = "";//clear string 新增後
     section.appendChild(todo);
 
 })

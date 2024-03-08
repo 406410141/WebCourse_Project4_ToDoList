@@ -5,3 +5,4 @@ PLZ Upload Succesfully
 
 
 0306 finished Js3 => REmove animation
+0308 finished quick fixe ＆＆Local Storage
